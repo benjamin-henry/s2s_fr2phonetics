@@ -1,27 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>fr2phonetics</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <link rel="stylesheet" href="./css/main.css">
 </head>
-<body>
-    <div>
-        <input type="text" name="" id="input_text">
+<body style="background: #000">
+  <div class="container min-vh-100 d-flex flex-column align-content-center">
+    <div class="row flex-grow-1 d-flex justify-content-center align-items-center">
+      <div class="col-12 col-md-4">
+        <div class="card center-block" style="background: #222; border-color:white">
+          <div class="card-header" style="background: #222;">
+            <h3 class="text-center text-primary font-weight-bold" style="color: #CCCEE8;"><span style="color:#CCCEE8">Fr2phonetics</span></h3>
+          </div>
+          <div class="card-body" style="background: #111;">
+            <p class="card-text text-justify" style="color: #CCCEF9;">
+              Cette application convertit le texte renseigné par l'utilisateur en langage phonétique.
+            </p>
+            <div class="card-text ml-3 mb-2" style="color: #CCCEE8;">Entrez votre texte :</div>
+            <div class="form-group">
+              <input class="form-control mb-2" type="text" id="input_text" required>
+              <button id="translate" class="btn btn-outline-success btn-lg btn-block mt-3 mb-3">Traduire</button>
+              <button id="clean" class="btn btn-outline-danger btn-lg btn-block mt-3 mb-3">Reset</button>
+              <p id="translation_field" class="text-center" style="color:white;font-size: 30px"></p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    
-    <div>
-        <button id="clean">reset</button>
-        <button id="translate">traduire</button>
-    </div>
-    <div>
-        <h1 id="translation_field"></h1>
-    </div>
-    
-
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
-    <script src="./js/index.js"></script>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
+  <script src="./js/index.js"></script>
 </body>
 </html>
